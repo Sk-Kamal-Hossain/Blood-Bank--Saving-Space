@@ -1,6 +1,6 @@
 ### Hi there, I'm SK Kamal - [Programmer] 👋
 
-[![Website](https://img.shields.io/website?label=medium.com&style=for-the-badge&url=https%3A%2F%2Fmedium.com)](https://medium.com/@skkamal6301)
+[![Website](https://img.shields.io/website?label=medium.com&style=for-the-badge&url=https%3A%2F%2Fmedium.com)](https://skkamal01.medium.com/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/skkamal?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/SKKamalHossai10)
 
 ## I'm a Student, Developer, and Teacher!!
