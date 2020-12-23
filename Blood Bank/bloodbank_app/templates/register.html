@@ -91,10 +91,6 @@
                             href="register">Register</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="/login">Login</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#about">About</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -108,28 +104,22 @@
         <div class="">
             <article class="card-body mx-auto" style="max-width: 400px;">
                 <h4 class="card-title mt-3 text-center">Create Account</h4>
-                <p>
-                    <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-                    <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via
-                        facebook</a>
+                <form action="al/homepage.html" method="POST">
+                    
+                    {% csrf_token %}
 
-                </p>
-                <p class="divider-text">
-                    <span class="bg-light">OR</span>
-                </p>
-                <form>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Donor name" type="text">
+                        <input name="name" class="form-control" placeholder="Donor name" type="text">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-venus-mars"></i> </span>
                         </div>
                         <select class="form-control">
-                            <option selected=""> Gender</option>
+                            <option selected disabled="True"> Gender</option>
                             <option>Male</option>
                             <option>Female</option>
                             <option>Other</option>
@@ -140,7 +130,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-child"></i> </span>
                         </div>
-                        <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="Age"
+                        <input type="number" id="quantity" name="age" min="1" max="150" placeholder="Age"
                             class="form-control">
                     </div>
                     <!-- form-group end.// -->
@@ -149,26 +139,26 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Email address" type="email">
+                        <input name="email" class="form-control" placeholder="Email address" type="email">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                         </div>
                         <select class="custom-select" style="max-width: 120px;">
-                            <option selected="">+880</option>
+                            <option selected ="">+880</option>
                             <option value="1">+972</option>
                             <option value="2">+198</option>
                             <option value="3">+701</option>
                         </select>
-                        <input name="" class="form-control" placeholder="Phone number" type="text">
+                        <input name="phone" class="form-control" placeholder="Phone number" type="text">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-heartbeat"></i> </span>
                         </div>
                         <select class="form-control">
-                            <option selected=""> Blood group</option>
+                            <option selected disabled="True"> Blood group</option>
                             <option>O-</option>
                             <option>O+</option>
                             <option>A-</option>
@@ -183,23 +173,22 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Create password" type="password">
+                        <input name="password" class="form-control" placeholder="Create password" type="password">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Repeat password" type="password">
+                        <input name= "passwordr" class="form-control" placeholder="Repeat password" type="password">
                     </div> <!-- form-group// -->
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-file"></i> </span>
-                        </div>
-                        <input type="file" id="myFile" name="filename" class="form-control">
+
+                        <div class="form-group input-group">
+                        
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
-                    </div> <!-- form-group// -->
+                    <div class="form-group"
+                       <a href="al/homepage.html"> <button type="submit" class="btn btn-primary btn-block"> Submit </button> </a>
+                    </div> <!-- form-group// --> 
+
                     <p class="text-center">Have an account? <a href="login.html">Log In</a> </p>
                 </form>
             </article>
@@ -244,7 +233,7 @@
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>Copyright © Your Website 2020</small></div>
+        <div class="container"><small>SAVING SPACE</small></div>
     </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
     <div class="scroll-to-top d-lg-none position-fixed">
