@@ -27,8 +27,8 @@ def homepageView(request):
     passwordr = request.POST.get('passwordr')
     all = [name, gender, age, email, phone, bloodgroup, password, passwordr]
 
-    return render(request, 'login/al/homepage.html', {'all':all})
+    return render(request, 'homepage.html', {'all':all})
 
 def profileView(request):
 
-    return render(request, 'al/profile.html')
+    return render(request, 'profile.html')
