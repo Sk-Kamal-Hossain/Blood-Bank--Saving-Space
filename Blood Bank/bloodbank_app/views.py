@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
 from django.http import HttpResponse
 
 # Create your views here.
@@ -10,25 +12,41 @@ def loginView(request):
     return render(request, 'login.html')
 
 def registerView(request):
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        #gender = request.POST['gender']
+        #age = request.POST['age']
+        email = request.POST['email']
+        #phone = request.POST['phone']
+        #bloodgroup = request.POST['bloodgroup']
+        password = request.POST['password']
+        passwordr = request.POST['passwordr']
+
+        if password==passwordr:
+            if User.objects.filter(username=name).exists():
+                messages.info(request, 'Username Taken')
+                return redirect('homepage')
+            elif User.objects.filter(email=email).exists():
+                messages.info(request, 'Email Taken')
+                return redirect('homepage')
+            else:
+                user = User.objects.create_user(username=name, email=email, password=passwordr)
+                user.save()
+                print('user created')
+    
+        else:
+            messages.info(request, 'Password not matching')
+            return redirect('register')
+        return redirect('/')
+
+    else:
+        return render(request, 'register.html')
 
 def requestsendView(request):
 	return render(request, 'requestsend.html')
 
 def homepageView(request):
-
-    name = request.POST.get('name')
-    gender = request.POST.get('gender')
-    age = request.POST.get('age')
-    email = request.POST.get('email')
-    phone = request.POST.get('phone')
-    bloodgroup = request.POST.get('bloodgroup')
-    password = request.POST.get('password')
-    passwordr = request.POST.get('passwordr')
-    all = [name, gender, age, email, phone, bloodgroup, password, passwordr]
-
-    return render(request, 'homepage.html', {'all':all})
-
+    return render(request, 'homepage.html')
+    
 def profileView(request):
-
     return render(request, 'profile.html')

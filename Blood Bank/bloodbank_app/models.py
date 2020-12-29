@@ -14,11 +14,11 @@ class Bloodbank(models.Model):
 
 class Register(models.Model):
     name = models.CharField(max_length=150)
-    gender = models.CharField(max_length=200)
-    age = models.CharField(max_length=100)
+    #gender = models.CharField(max_length=200)
+    #age = models.CharField(max_length=100)
     email = models.CharField(max_length=200)
-    phone = models.CharField(max_length=15)
-    bloodgroup = models.CharField(max_length=100)
+    #phone = models.CharField(max_length=15)
+    #bloodgroup = models.CharField(max_length=100)
     password = models.CharField(max_length=20)
     passwordr = models.CharField(max_length=20)
 
