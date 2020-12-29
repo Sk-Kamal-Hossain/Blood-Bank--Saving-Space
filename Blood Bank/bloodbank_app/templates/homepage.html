@@ -18,6 +18,38 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    //Start Map Google
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-nYgjgxjpOcAk7LE9W42wDcO4XrBP0JM&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+
+      #map {
+        height: 100%;
+      }
+
+      
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center:{lat:23.6850, lng:-90.3563},
+            zoom: 8,
+        });
+      }
+    </script>
+
+    // End Google Map
 </head>
 
 <body id="page-top">
@@ -67,6 +99,9 @@
             <p class="masthead-subheading font-weight-light mb-0">Anybody can save lives</p>
         </div>
     </header>
+
+    <div id="map"></div>
+
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
