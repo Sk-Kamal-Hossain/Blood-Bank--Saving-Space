@@ -9,7 +9,20 @@ def indexView(request):
     return render(request, 'index.html')
 
 def loginView(request):
-    return render(request, 'login.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=name, password=password)
+        
+        if user is not None:
+            auth.login(request, user)
+            return redirect("homepage")
+        else:
+            messages.info(request, 'invalid credentials')
+            return redirect('login')
+    else:
+        return render(request, 'login.html')
 
 def registerView(request):
     if request.method == 'POST':
