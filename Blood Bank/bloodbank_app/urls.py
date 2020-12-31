@@ -17,4 +17,5 @@ urlpatterns = [
     path('requestsend', views.requestsendView, name='requestsend'),
     path('homepage', views.homepageView, name='homepage'),
     path('profile', views.profileView, name='profile'),
+    path('search', views.search_result, name='search'),
 ]

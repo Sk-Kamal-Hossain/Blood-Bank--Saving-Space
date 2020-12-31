@@ -2,8 +2,18 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 #from django.http import HttpResponse
-
+from .models import *
 # Create your views here.
+def search_result(request):
+    user_list = Register.objects.all().order_by('-id')
+    context = {'users': user_list}
+
+    if request.method == 'GET':
+        keyword = request.GET.get('bloodgroup')
+        search_filter = Register.objects.filter(bloodgroup=keyword)
+        context['results'] = search_filter
+
+    return render(request, 'al/search_result.html', context)
 
 def indexView(request):
     return render(request, 'index.html')
