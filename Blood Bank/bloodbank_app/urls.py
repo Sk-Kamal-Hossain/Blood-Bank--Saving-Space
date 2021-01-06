@@ -17,4 +17,6 @@ urlpatterns = [
     path('requestsend', views.requestsendView, name='requestsend'),
     path('homepage', views.homepageView, name='homepage'),
     path('profile', views.profileView, name='profile'),
+    path('viewdonation', views.viewdonationView, name='viewdonation'),
+    path('viewrequest', views.viewrequestView, name='viewrequest'),
 ]
