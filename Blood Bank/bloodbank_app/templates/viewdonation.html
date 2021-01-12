@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>View Request</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/bloodicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Saving Space</a>
+            <button
+                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="profile">Profile</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="blooddonate">Blood Donate</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="viewdonation">View Donation</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="requestsend">Send Request</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="viewrequest">View Request</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="login">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{% static 'img/bloodlogo.png' %}" alt="" />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Saving Space</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Anybody can save lives</p>
+        </div>
+    </header>
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver1">
+                    <div class="table100-firstcol">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1">Blood Seeker</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">SK Kamal</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Sharun Tasin</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Rahim Uddin</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Rehnuma Shaty</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Shoyeb Bin</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Nabil Hossain</td>
+                                </tr>
+
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">Shethy Choudhury</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="wrap-table100-nextcols js-pscroll">
+                        <div class="table100-nextcols">
+                            <table>
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column2">Position</th>
+                                        <th class="cell100 column3">Start date</th>
+                                        <th class="cell100 column5">Contacts</th>
+                                        <th class="cell100 column6">Age</th>
+                                        <th class="cell100 column7">Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+
+                                    <tr class="row100 body">
+                                        <td class="cell100 column2">Student</td>
+                                        <td class="cell100 column3">07 Jan 2021</td>
+                                        <td class="cell100 column5">01662234512</td>
+                                        <td class="cell100 column6">24</td>
+                                        <td class="cell100 column7">Jatrabari Dhaka</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        2215 John Daniel Drive
+                        <br />
+                        Clark, MO 65243
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">About SavingSpace</h4>
+                    <p class="lead mb-0">
+                        This a Blood Bank Website.You can find any group of blood here.Our main target is save people
+                        life.
+                        In our country every 2 second a person need blood.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+    <script>
+        $('.js-pscroll').each(function () {
+            var ps = new PerfectScrollbar(this);
+
+            $(window).on('resize', function () {
+                ps.update();
+            })
+
+            $(this).on('ps-x-reach-start', function () {
+                $(this).parent().find('.table100-firstcol').removeClass('shadow-table100-firstcol');
+            });
+
+            $(this).on('ps-scroll-x', function () {
+                $(this).parent().find('.table100-firstcol').addClass('shadow-table100-firstcol');
+            });
+
+        });
+
+
+
+
+    </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

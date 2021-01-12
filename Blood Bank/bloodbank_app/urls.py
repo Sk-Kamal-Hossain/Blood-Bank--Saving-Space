@@ -14,9 +14,11 @@ urlpatterns = [
     path('', views.indexView, name='index'),
     path('login', views.loginView, name='login'),
     path('register', views.registerView, name='register'),
+    path('blooddonate', views.blooddonateView, name='blooddonate'),
     path('requestsend', views.requestsendView, name='requestsend'),
     path('homepage', views.homepageView, name='homepage'),
     path('profile', views.profileView, name='profile'),
     path('viewdonation', views.viewdonationView, name='viewdonation'),
     path('viewrequest', views.viewrequestView, name='viewrequest'),
+    path('camps', views.campsView, name='camps'),
 ]

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Camps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Saving Space</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/bloodicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Saving Space</a>
+            <button
+                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="/">Home</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="camps">Camps</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="register">Register</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="/login">Login</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Saving Space</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Anybody can save lives</p>
+        </div>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="w3-container">
+        <h2>Blood Donation Campain</h2>
+        <div class="w3-panel w3-blue w3-round-xlarge">
+            <p>North South University Started Blood Donation Campain </p>
+            <img src="static/img/nsu-blood.jpg" alt="Trulli" width="500" height="333">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from .models import Register
-#from django.http import HttpResponse
+from django.http import HttpResponse
+from .models import Camps
 
 # Create your views here.
 
@@ -55,6 +56,7 @@ def registerView(request):
 
     else:
         return render(request, 'register.html')
+    return HttpResponse(request, 'homepage')
 
 def requestsendView(request):
 	return render(request, 'requestsend.html')
@@ -65,8 +67,17 @@ def homepageView(request):
 def profileView(request):
     return render(request, 'profile.html')
 
+def blooddonateView(request):
+
+    dests = Camps.objects.all()
+
+    return render(request, 'blooddonate.html', {'dests':dests})
+
 def viewdonationView(request):
     return render(request, 'viewdonation.html')
 
 def viewrequestView(request):
     return render(request, 'viewrequest.html')
+
+def campsView(request):
+    return render(request, 'camps.html')
