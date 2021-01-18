@@ -127,3 +127,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# myaccount.google.com/lesssecureapps
+# Email Settings
+EMAIL_HOST = 'localhost' #smtp.gmail.com
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'savingspace@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+#EMAIL_USE_SSL = False

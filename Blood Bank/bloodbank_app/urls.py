@@ -21,4 +21,6 @@ urlpatterns = [
     path('viewdonation', views.viewdonationView, name='viewdonation'),
     path('viewrequest', views.viewrequestView, name='viewrequest'),
     path('camps', views.campsView, name='camps'),
+    path('bloodbanks', views.bloodbanksView, name='bloodbanks'),
+    path('contact', views.contactView, name='contact'),
 ]

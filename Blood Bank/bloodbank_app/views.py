@@ -4,10 +4,22 @@ from django.contrib.auth.models import User, auth
 from .models import Register
 from django.http import HttpResponse
 from .models import Camps
+from django.core.mail import send_mail
 
 # Create your views here.
 
 def indexView(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+
+        send_mail('Contact From',
+        name,email,phone,message,
+        settings.EMAIL_HOST_USER,
+        ['skkamal6301@gmail.com'],
+        fail_silently=False)
     return render(request, 'index.html')
 
 def loginView(request):
@@ -56,7 +68,7 @@ def registerView(request):
 
     else:
         return render(request, 'register.html')
-    return HttpResponse(request, 'homepage')
+    return render(request, 'homepage.html')
 
 def requestsendView(request):
 	return render(request, 'requestsend.html')
@@ -68,10 +80,7 @@ def profileView(request):
     return render(request, 'profile.html')
 
 def blooddonateView(request):
-
-    dests = Camps.objects.all()
-
-    return render(request, 'blooddonate.html', {'dests':dests})
+    return render(request, 'blooddonate.html')
 
 def viewdonationView(request):
     return render(request, 'viewdonation.html')
@@ -81,3 +90,28 @@ def viewrequestView(request):
 
 def campsView(request):
     return render(request, 'camps.html')
+
+def bloodbanksView(request):
+    return render(request, 'bloodbanks.html')
+
+def contactView(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        messages = request.POST['message']
+
+        # send an email
+        #send_mail(
+        #    name,
+        #    message, 
+        #    email,    
+        #    ['skkamal6301@gmail.com'],
+        #    subject,
+        #    )
+
+        return render(request, 'contact.html', {'name': name})
+
+    else:
+        return render(request, 'contact.html', {})
+
