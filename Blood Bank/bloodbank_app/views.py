@@ -5,6 +5,7 @@ from .models import Register
 from django.http import HttpResponse
 from .models import Camps
 from django.core.mail import send_mail
+from .models import Donation
 
 # Create your views here.
 
@@ -114,4 +115,17 @@ def contactView(request):
 
     else:
         return render(request, 'contact.html', {})
+
+
+def search_result(request):
+    user_list = Donation.objects.all().order_by('-age')
+    context = {'users': user_list}
+
+    if request.method == 'GET':
+        keyword = request.GET.get('bloodgroup')
+        search_filter = Donation.objects.filter(bloodgroup=keyword)
+        context['results'] = search_filter
+        context['keyword'] = keyword
+
+    return render(request, 'search_result.html', context)
 

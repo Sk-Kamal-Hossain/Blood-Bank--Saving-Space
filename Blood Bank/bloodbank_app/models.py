@@ -45,3 +45,33 @@ class Camps(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Donation(models.Model):
+    name = models.CharField(max_length=250)
+    age = models.IntegerField()
+    phone = models.CharField(max_length=15)
+
+    BLOOD_CHOICE =(
+        ('A+', 'A+'),
+        ('A-', 'A-'),
+        ('B+', 'B+'),
+        ('B-', 'B-'),
+        ('O+', 'O+'),
+        ('O-', 'O-'),
+        ('AB+', 'AB+'),
+        ('AB-', 'AB-'),
+
+    )
+    bloodgroup = models.CharField(max_length=100, choices=BLOOD_CHOICE)
+
+    GENDER_CHOICE = (
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+        ('Other', 'Other')
+    )
+
+    gender = models.CharField(max_length=100, choices=GENDER_CHOICE)
+
+    def __str__(self):
+        return self.name
