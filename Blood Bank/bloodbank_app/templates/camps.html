@@ -96,7 +96,19 @@
             <img src="static/img/camp-01.jpg" alt="Trulli" width="500" height="333">
         </div>
     </div>
-
+    <div class="w3-container">
+        <div class="w3-panel w3-blue w3-round-xlarge">
+    {% if obj %}
+    {% for k in obj %}
+    <h2>{{ k.name }}</h2><br>
+    <img src="{{k.pics.url}}" alt="{{k.name}}" width="50%"><br>
+    <p>{{ k.desc }}</p><br>
+    {{ k.dat }}<br>
+    <hr>
+    {% endfor %}
+    {% endif %}
+</div>
+</div>
 </body>
 
 </html>

@@ -40,8 +40,9 @@ class Register(models.Model):
 
 class Camps(models.Model):
     name = models.CharField(max_length=100)
-    img = models.ImageField(upload_to='pics')
+    img = models.ImageField(upload_to='pics/')
     desc = models.TextField()
+    dat = models.DateField()
 
     def __str__(self):
         return self.name

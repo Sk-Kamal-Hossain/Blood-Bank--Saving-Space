@@ -90,7 +90,8 @@ def viewrequestView(request):
     return render(request, 'viewrequest.html')
 
 def campsView(request):
-    return render(request, 'camps.html')
+    obj = Camps.objects.all().order_by('-dat')
+    return render(request, 'camps.html',{'obj':obj})
 
 def bloodbanksView(request):
     return render(request, 'bloodbanks.html')
